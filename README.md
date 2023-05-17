@@ -65,7 +65,9 @@ df_encode.head(5)
 4	  2	        298.2	                308.7	                1408	                40.0	          9	          1
 ```
 ### 🏔️Feature Oversampling
-The target label found inbalanced in the dataset, where 96% target label are **No Failure**. Unbalanced dataset may result to an overfitting model towards a specific label that does not generalized well towards other labels. Synthetic Minority Oversampling Technique (SMOTE) will be proceed next to oversampling the features, so the target label is balanced. 
+The target label found inbalanced in the dataset, where 96% target label are **No Failure**. Unbalanced dataset may result to an overfitting model towards a specific label that does not generalized well towards other labels. 
+
+Synthetic Minority Oversampling Technique (SMOTE) will be proceed next to oversampling the features, so the target label is balanced. 
 
 SMOTE can be intialized by importing ``from imblearn.combine import SMOTETomek`` and resample data using ``.fit_resample(df.values,y)``. Below is the result of oversampling data vs original data.
 
