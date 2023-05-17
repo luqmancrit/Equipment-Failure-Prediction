@@ -1,4 +1,4 @@
-# ⚙️🧬Failure Machine Prediction
+# ⚙️🏭Failure Machine Prediction
 A classification model that predicts a machine failure types. 
 
 Built in:
