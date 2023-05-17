@@ -1,4 +1,4 @@
-# ⚙️🏭Machine Failure Prediction
+# ⚙️🏭Equipment Failure Prediction
 A classification model built from Support Vector Machine (SVM), Synthetic Minority Oversampling Technique (SMOTE), Stratified KFolds, GridSearchCV that predicts a machine failures. These are possible machine failures:
 
 - No Failure
