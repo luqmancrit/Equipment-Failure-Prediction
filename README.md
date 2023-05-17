@@ -46,18 +46,18 @@ Observation:
   <img src="https://github.com/luqmancrit/Failure-Prediction/blob/main/images/eda%20-%20pairplot.png?raw=true" width="500" height="500" alt="Image 2">
 </p>
 
-## Feature Engineering
-### Feature Selection
+## 🧰Feature Engineering
+### 🧩Feature Selection
 Found during EDA that column ['UDI', 'Product ID', 'Target'] considered not needed in features. The column are dropped from the dataset.
 
 <img src="https://github.com/luqmancrit/Failure-Prediction/blob/main/images/feature%20selection%20-%20drop%20columns.png?raw=true" width="700" height="250" alt="alt text">
 
-### Feature and Target Encoding
+### 🔢Feature and Target Encoding
 Feature ['Type','Failure Type'] are in a string type. Feature encoding can be performed using ``import category_encoders as ce`` library to proceed the modeling process. ``ce.OrdinalEncoder(cols=['column'])``, ``fit_transform(df)``. Below is the feature encoding result.
 
 <img src="https://github.com/luqmancrit/Failure-Prediction/blob/main/images/feature%20encoding%20-%20machine%20type,%20failure%20type.png?raw=true" width="700" height="250" alt="alt text">
 
-### Feature Oversampling
+### 🧪Feature Oversampling
 The target label found inbalanced in the dataset, where 96% target label are **No Failure**. Unbalanced dataset may result to an overfitting model towards a specific label that does not generalized well towards other labels. Synthetic Minority Oversampling Technique (SMOTE) will be proceed next to oversampling the features, so the target label is balanced. 
 
 SMOTE can be intialized by importing ``from imblearn.combine import SMOTETomek`` and resample data using ``.fit_resample(df.values,y)``. Below is the result of oversampling data vs original data.
@@ -65,12 +65,12 @@ SMOTE can be intialized by importing ``from imblearn.combine import SMOTETomek``
 <img src="https://github.com/luqmancrit/Failure-Prediction/blob/main/images/feature%20oversampling%20-%20%20target%20value%20count.png?raw=true" width="700" height="200" alt="alt text">
 <img src="https://github.com/luqmancrit/Failure-Prediction/blob/main/images/feature%20oversampling%20-%20smote%20shape.png?raw=true" width="700" height="200" alt="alt text">
 
-### Feature Scaling
+### 🎛️Feature Scaling
 Since the features from the dataset have a different range, feature scaling will be perform to improve model convergence, model enhancing, standardize interpretation using ``from sklearn.preprocessing import StandardScaler``,``.fit_transform(feature)``. Below is the feature scaling result.
 
 <img src="https://github.com/luqmancrit/Failure-Prediction/blob/main/images/feature%20scaling%20.png?raw=true" width="700" height="200" alt="alt text">
 
-### Feature Split
+### 💠Feature Split
 The datasets will be splitted into partitions for further model evaluation, fine-tuning, preventing overfitting model and well assessed generalization model. The data will be splitted into:
 
 - Training set (70%)
@@ -78,7 +78,7 @@ The datasets will be splitted into partitions for further model evaluation, fine
 
 The feature split can be performed using ``from sklearn.model_selection import train_test_split``, ``train_test_split(feature, target, test_size=0.3)``
 
-## Cross Validation
+## 🏂Cross Validation
 Cross validation are performed to assess the performance and generalization ability of a model, which performing model training and evaluation iteratively, and then aggregating the results.
 
 The cross validation technique that will be used is Stratified KFolds with GridSearchCV, to find the best hyperparameters for the classification task. The dataset will be divided into k folds ensuring that the class distribution is preserved in each fold.
@@ -102,7 +102,7 @@ Getting the best parameters and model after cross validation:<br>
 Result:
 The best parameters are `{'C': 30, 'kernel': 'rbf'}`
 
-## Model Evaluation
+## 🎿Model Evaluation
 After getting the best model, the model will be evaluated back for every data splits including training, test and all dataset. During model evaluation, the best model prediction, classification report, and confusion matrix will be generated for further observation. 
 
 Below is the model evaluation result:
