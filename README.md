@@ -1,30 +1,16 @@
 # ⚙️🏭Machine Failure Prediction
-A classification model that predicts a machine failure types. 
-
-Built in:
-- Model: Support Vector Machine (SVM).
-- Feature outsampling: Synthetic Minority Oversampling Technique (SMOTE).
-- Cross validation: Stratified KFolds, GridSearchCV.
-- Model evaluation: Precision/Recall, F1 Score, Confusion Matrix, Accuracy.
-
-These are possible machine failures:
+A classification model built from Support Vector Machine (SVM), Synthetic Minority Oversampling Technique (SMOTE), Stratified KFolds, GridSearchCV that predicts a machine failures. These are possible machine failures:
 
 - No Failure
 - Heat Dissipation Failure
 - Power Failure
 - Overstain Failure
 - Tool Wear Failure
-- Random Failures
+- Random Failures 
+
+Model features: Type (L, M, H), Air Temperature [K], Process Temperature [K], Rotational Speed [rpm], Torque [Nm], Tool Wear [min]
 
 <img src="https://github.com/luqmancrit/Failure-Prediction/blob/main/images/training%20confusion%20matrix.png?raw=true" alt="alt text" width="350" height="270"> <img src="https://github.com/luqmancrit/Failure-Prediction/blob/main/images/test%20confusion%20matrix.png?raw=true" alt="alt text" width="350" height="270"> 
-
-Model features:
-- Type: L, M, H
-- Air Temperature [K]
-- Process Temperature [K]
-- Rotational Speed [rpm]
-- Torque [Nm]
-- Tool Wear [min]
 
 ## 📑Data Acquisition
 Dataset can be obtained from Kaggle: https://www.kaggle.com/datasets/shivamb/machine-predictive-maintenance-classification
