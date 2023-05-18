@@ -10,6 +10,8 @@ A classification model built from Support Vector Machine (SVM), Synthetic Minori
 
 Model features: Type (L, M, H), Air Temperature [K], Process Temperature [K], Rotational Speed [rpm], Torque [Nm], Tool Wear [min]
 
+Below is the final results of the model:
+
 <img src="https://github.com/luqmancrit/Failure-Prediction/blob/main/images/training%20confusion%20matrix.png?raw=true" alt="alt text" width="350" height="270"> <img src="https://github.com/luqmancrit/Failure-Prediction/blob/main/images/test%20confusion%20matrix.png?raw=true" alt="alt text" width="350" height="270"> 
 
 ## 📑Data Acquisition
