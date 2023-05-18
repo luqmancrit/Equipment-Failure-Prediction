@@ -224,8 +224,6 @@ Observation: From the classification report, we can make the following observati
 
 - F1-Score: F1-scores for all classes are quite high, ranging from 0.90 to 1.00. Again, the F1-scores remain consistent across the different sets.
 
-- Support: Evidence that the class distribution is roughly balanced across all classes in the data sets.
-
 - Accuracy: The overall accuracy of the model is approximately 0.97 for all sets, indicating that the model correctly classifies around 97% of the instances. This high accuracy suggests that the model is performing well on the given data.
 
 - Confusion Matrix: Overall the true positive for all classes has a very high point accross all different sets. This result suggests that the model is performing well in correctly identifying instances of each classes.
