@@ -1,4 +1,4 @@
-# ⚙️🧬Equipment Failure Prediction
+# ⚙️🧬Equipment Failure Prediction AUC=99.46%
 A classification model built on Support Vector Machine (SVM), Synthetic Minority Oversampling Technique (SMOTE), Stratified KFolds, GridSearchCV that predicts a machine failures. These are possible machine failures:
 
 - No Failure
@@ -146,7 +146,9 @@ The best parameters are `{'C': 30, 'kernel': 'rbf'}`
 ## 🎿Model Evaluation
 After getting the best model, the model will be evaluated back for every data splits including training, test and all dataset. During model evaluation, the best model prediction, classification report, and confusion matrix will be generated for further observation. 
 
-Below is the model evaluation result:
+Evaluation metrics involved: `Precision/Recall` `F1 Score` `Accuracy` `Confusion Matrix` `One vs Rest (OVR)` `ROC` `AUC`
+
+Model evaluation result:
 - Training set:
 
 ```
@@ -201,6 +203,16 @@ weighted avg       0.97      0.97      0.96     57890
 ```
 <img src="https://github.com/luqmancrit/Failure-Prediction/blob/main/images/all%20confusion%20matrix.png?raw=true" width="300" height="280" alt="alt text">
 
+- OVR ROC AUC (Test Set)
+`yhat_probs = best_model.predict_proba(xtest)`<br>
+`auc_scores = roc_auc_score(ytest, yhat_probs, multi_class='ovr')`<br>
+`mean_auc = np.mean(auc_scores)`<br>
+
+```
+AUC Scores for Each Class: 99.46120716664028
+Mean AUC: 99.46120716664028
+```
+
 Observation: From the classification report, we can make the following observations for the three different sets: training, test, and all data.
 
 - Precision: Overall the model performs well in terms of precision for all failure types, with values ranging from 0.91 to 1.00. The precision values are consistent across the training, test, and all data sets.
@@ -213,6 +225,8 @@ Observation: From the classification report, we can make the following observati
 
 - Accuracy: The overall accuracy of the model is approximately 0.97 for all sets, indicating that the model correctly classifies around 97% of the instances. This high accuracy suggests that the model is performing well on the given data.
 
-- Confusion Matrix: Overall the true positive for all classes has a very high point accross all different sets. This result suggests that the model is performing well in correctly identifying instances of each classes. 
+- Confusion Matrix: Overall the true positive for all classes has a very high point accross all different sets. This result suggests that the model is performing well in correctly identifying instances of each classes.
+
+- OVR ROC AUC (Test Set): A mean AUC score of 0.9946 and individual AUC scores of 0.9946 for each class indicate that the model is capable of accurately predicting the probabilities of the different classes. The model is performing exceptionally well in the failure type classification task.
 
 
