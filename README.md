@@ -27,7 +27,7 @@ This repository showcases the exploratory data analysis (EDA). The combination o
 Observation: 
 - Column `df['UDI', 'Product ID', 'Target']` considered not needed.
 - Features `df['Type','Failure Type']` needed to be encoded.
-- The target label `df['Failure Type']` is imbalanced with 96% is No Failure.
+- The target label `df['Failure Type']` is imbalanced with **96% is No Failure**.
 
 <p align="left">
   <img src="https://github.com/luqmancrit/Failure-Prediction/blob/main/images/eda%20-%20histogram.png?raw=true" width="500" height="300" alt="Image 1">
