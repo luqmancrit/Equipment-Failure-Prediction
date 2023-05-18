@@ -13,7 +13,10 @@ Here are all process on building the model: `Expolaratory Data Analysis` `Featur
 Evaluation metrics involved: `Precision/Recall` `F1 Score` `Accuracy` `Confusion Matrix` `One vs Rest (OVR)` `ROC` `AUC`.
 
 Below is the final results of the model:
-
+```
+AUC Scores for Each Class: 99.46%
+Mean AUC: 99.46%
+```
 <img src="https://github.com/luqmancrit/Failure-Prediction/blob/main/images/training%20confusion%20matrix.png?raw=true" alt="alt text" width="350" height="270"> <img src="https://github.com/luqmancrit/Failure-Prediction/blob/main/images/test%20confusion%20matrix.png?raw=true" alt="alt text" width="350" height="270"> 
 
 ## 📑Data Acquisition
