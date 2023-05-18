@@ -121,9 +121,7 @@ The feature split can be performed by:<br>
 ## 🏂Cross Validation
 Cross validation are performed to assess the performance and generalization ability of a model, which performing model training and evaluation iteratively, and then aggregating the results.
 
-The cross validation technique that will be used is Stratified KFolds with GridSearchCV, to find the best hyperparameters for the classification task. The dataset will be divided into k folds ensuring that the class distribution is preserved in each fold.
-
-Then the performance of the model is evaluated on the validation set (1 fold) using a chosen evaluation metric (e.g., accuracy, F1 score). The average performance across all k folds is calculated. The combination of hyperparameters that yields the best average performance across the k folds is selected as the optimal set of hyperparameters.
+The cross validation technique that will be used is Stratified KFolds with GridSearchCV, to evaluate the model into k folds and find the best hyperparameters for the classification task. 
 
 K will be set = 5<br>
 ``skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)``
@@ -213,6 +211,6 @@ Observation: From the classification report, we can make the following observati
 
 - Accuracy: The overall accuracy of the model is approximately 0.97 for all sets, indicating that the model correctly classifies around 97% of the instances. This high accuracy suggests that the model is performing well on the given data.
 
-- Confusion Matrix: Overall the true positive for all classes has a very high point accross all different sets. This result suggests that the model is performing well in correctly identifying instances of each classes. A high true positive rate indicates that the model is effective at capturing the positive instances, meaning it can accurately classify samples belonging to each class.
+- Confusion Matrix: Overall the true positive for all classes has a very high point accross all different sets. This result suggests that the model is performing well in correctly identifying instances of each classes. 
 
 
