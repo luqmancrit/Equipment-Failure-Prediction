@@ -1,5 +1,5 @@
 # ⚙️🧬Equipment Failure Prediction
-A classification model built from Support Vector Machine (SVM), Synthetic Minority Oversampling Technique (SMOTE), Stratified KFolds, GridSearchCV that predicts a machine failures. These are possible machine failures:
+A classification model built on Support Vector Machine (SVM), Synthetic Minority Oversampling Technique (SMOTE), Stratified KFolds, GridSearchCV that predicts a machine failures. These are possible machine failures:
 
 - No Failure
 - Heat Dissipation Failure
@@ -120,10 +120,10 @@ The feature split can be performed by:<br>
 `from sklearn.model_selection import train_test_split`<br> 
 `xtrain, xtest, ytrain, ytest = train_test_split(feature, target, test_size=0.3)`
 
-## 🏂Cross Validation
-Cross validation are performed to assess the performance and generalization ability of a model, which performing model training and evaluation iteratively, and then aggregating the results.
+## 🏂Cross Validation and Hyperparameter Tuning
+Cross validation with hyperparameter tuning are performed to assess the performance and generalization ability of a model, which performing model training and evaluation iteratively, and then aggregating the results.
 
-The cross validation technique that will be used is Stratified KFolds with GridSearchCV, to evaluate the model into k folds and find the best hyperparameters for the classification task. 
+The cross validation technique that will be using: Stratified KFolds. For hyperparameter tuning will be using: GridSearchCV, to evaluate the model into k folds and find the best hyperparameters for the classification task. 
 
 K will be set = 5<br>
 ``skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)``
