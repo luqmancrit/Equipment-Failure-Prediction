@@ -203,14 +203,14 @@ weighted avg       0.97      0.97      0.96     57890
 ```
 <img src="https://github.com/luqmancrit/Failure-Prediction/blob/main/images/all%20confusion%20matrix.png?raw=true" width="300" height="280" alt="alt text">
 
-- OVR ROC AUC (Test Set)
+- OVR ROC AUC (Test Set)<br>
 `yhat_probs = best_model.predict_proba(xtest)`<br>
 `auc_scores = roc_auc_score(ytest, yhat_probs, multi_class='ovr')`<br>
 `mean_auc = np.mean(auc_scores)`<br>
 
 ```
-AUC Scores for Each Class: 99.46120716664028
-Mean AUC: 99.46120716664028
+AUC Scores for Each Class: 99.46%
+Mean AUC: 99.46%
 ```
 
 Observation: From the classification report, we can make the following observations for the three different sets: training, test, and all data.
