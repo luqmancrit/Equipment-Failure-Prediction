@@ -10,6 +10,8 @@ A classification model built on Support Vector Machine (SVM), Synthetic Minority
 
 Here are all process on building the model: `Expolaratory Data Analysis` `Feature Selection` `Feature Encoding` `Feature Oversampling` `Feature Scaling` `Feature Split` `Cross Validation` `Hyperparameter Tuning` `Model Evaluation`.
 
+Evaluation metrics involved: `Precision/Recall` `F1 Score` `Accuracy` `Confusion Matrix` `One vs Rest (OVR)` `ROC` `AUC`.
+
 Below is the final results of the model:
 
 <img src="https://github.com/luqmancrit/Failure-Prediction/blob/main/images/training%20confusion%20matrix.png?raw=true" alt="alt text" width="350" height="270"> <img src="https://github.com/luqmancrit/Failure-Prediction/blob/main/images/test%20confusion%20matrix.png?raw=true" alt="alt text" width="350" height="270"> 
@@ -144,9 +146,7 @@ Result:
 The best parameters are `{'C': 30, 'kernel': 'rbf'}`
 
 ## 🎿Model Evaluation
-After getting the best model, the model will be evaluated back for every data splits including training, test and all dataset. During model evaluation, the best model prediction, classification report, and confusion matrix will be generated for further observation. 
-
-Evaluation metrics involved: `Precision/Recall` `F1 Score` `Accuracy` `Confusion Matrix` `One vs Rest (OVR)` `ROC` `AUC`
+After getting the best model, the model will be evaluated back for every data splits including training, test and all dataset. During model evaluation, the best model prediction, classification report, confusion matrix, OVR ROC AUC will be generated for further observation. 
 
 Model evaluation result:
 - Training set:
