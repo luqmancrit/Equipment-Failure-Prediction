@@ -8,7 +8,7 @@ A classification model built on Support Vector Machine (SVM), Synthetic Minority
 - Tool Wear Failure
 - Random Failures 
 
-Model features: Type (L, M, H), Air Temperature [K], Process Temperature [K], Rotational Speed [rpm], Torque [Nm], Tool Wear [min]
+Here are all process on building the model: `Expolaratory Data Analysis` `Feature Selection` `Feature Encoding` `Feature Oversampling` `Feature Scaling` `Feature Split` `Cross Validation` `Hyperparameter Tuning` `Model Evaluation`.
 
 Below is the final results of the model:
 
